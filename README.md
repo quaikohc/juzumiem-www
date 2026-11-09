@@ -13,7 +13,7 @@ To repo jest źródłem strony: zmiany w tekstach robimy tutaj.
 | `/pomoc/` | `pomoc/index.html` | kontakt i najczęstsze pytania |
 | (każdy zły adres) | `404.html` | „Nie ma takiej strony” |
 
-`CNAME` = `juzumiem.app` (własna domena), `.nojekyll` wyłącza Jekylla, `robots.txt` + `sitemap.xml` dla wyszukiwarek.
+Własną domenę `juzumiem.app` wpisuje się w Settings → Pages → Custom domain (GitHub sam doda plik `CNAME`); do tego czasu strona jest pod https://quaikohc.github.io/juzumiem-www/. `.nojekyll` wyłącza Jekylla, `robots.txt` + `sitemap.xml` dla wyszukiwarek.
 
 ## Do uzupełnienia przed wydaniem
 
@@ -38,7 +38,7 @@ Czcionki są na serwerze strony, nie z Google Fonts, żeby nie wysyłać adresó
 
 1. Publiczne repo z zawartością tego folderu w katalogu głównym, gałąź `main`.
 2. Settings → Pages → Build and deployment: „Deploy from a branch”, `main`, `/ (root)`.
-3. Custom domain: `juzumiem.app` (wczyta się z pliku `CNAME`), po wystawieniu certyfikatu zaznaczyć „Enforce HTTPS”.
+3. Gdy DNS działa: Custom domain `juzumiem.app` → Save, po wystawieniu certyfikatu zaznaczyć „Enforce HTTPS”.
 
 DNS w Cloudflare (rekordy „DNS only”, szara chmurka):
 
