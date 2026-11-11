@@ -83,12 +83,19 @@ main { flex: 1; }
   box-shadow: 0 3px 0 rgba(27, 42, 74, .08);
 }
 .nav a:hover, .nav a[aria-current="page"] { background: #fff; color: var(--green-dark); }
+.nav a.hot { background: var(--green); color: #fff; box-shadow: 0 3px 0 var(--green-dark); }
+.nav a.hot:hover { background: #379039; color: #fff; }
 
 /* ── hero ─────────────────────────────────────────── */
 .hero { padding: 24px 0 40px; }
 .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
 .hero .napis { width: min(420px, 80%); margin: 0 0 8px -8px; }
 .hero h1 { font-size: clamp(30px, 4.6vw, 46px); }
+.age {
+  display: inline-block; margin: 0 0 12px; padding: 6px 20px 4px; border-radius: 999px;
+  font-family: var(--head); font-weight: 800; font-size: 24px; line-height: 1.2; color: #fff;
+  background: var(--red); box-shadow: 0 4px 0 #c24f34; transform: rotate(-2deg);
+}
 .hero .lead { font-size: 20px; color: var(--text); max-width: 34em; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
 .btn {
@@ -170,6 +177,33 @@ section { padding: 44px 0; }
 .price .card p { font-size: 16px; }
 .note { text-align: center; color: var(--soft); font-size: 16px; margin-top: 18px; }
 
+/* ── gra ciągle rośnie ─────────────────────────────── */
+#rozwoj { padding: 10px 0 30px; }
+.dev {
+  background: linear-gradient(135deg, #3f9b43 0%, #5bb54a 100%); color: #fff;
+  border-radius: 36px; padding: 30px clamp(20px, 4vw, 44px); box-shadow: 0 8px 0 var(--green-dark), 0 18px 40px rgba(46, 125, 50, .25);
+  display: grid; grid-template-columns: .9fr 1.1fr; gap: 28px; align-items: center;
+}
+.dev h2, .dev h3 { color: #fff; }
+.dev-head p { font-size: 19px; margin: 0; opacity: .95; }
+.dev-points { display: grid; gap: 14px; }
+.dev-point {
+  display: flex; gap: 16px; align-items: center;
+  background: rgba(255, 255, 255, .14); border-radius: 22px; padding: 14px 18px;
+}
+.dev-point h3 { font-size: 21px; margin: 0 0 .15em; }
+.dev-point p { margin: 0; font-size: 16px; opacity: .95; }
+.dev-point a { color: #fff; font-weight: 700; }
+.dev-big {
+  flex: none; width: 92px; height: 92px; border-radius: 24px; background: #fff; color: var(--green-dark);
+  display: grid; place-content: center; text-align: center;
+  font-family: var(--head); font-weight: 800; font-size: 34px; line-height: .95;
+}
+.dev-big small { display: block; font-size: 15px; font-weight: 700; margin-top: 2px; }
+
+/* ── FAQ na stronie głównej ───────────────────────── */
+.faq details { box-shadow: 0 3px 0 rgba(27, 42, 74, .06); }
+
 /* ── strony z tekstem (prywatność, regulamin, pomoc) ─ */
 .doc {
   background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
@@ -226,7 +260,7 @@ details > div { padding-bottom: 14px; }
   .hero .wrap { grid-template-columns: 1fr; gap: 26px; }
   .hero .phone { max-width: 260px; }
   .grid-subjects { grid-template-columns: repeat(2, 1fr); }
-  .parents, .price { grid-template-columns: 1fr; }
+  .parents, .price, .dev { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
   body { font-size: 17px; }
@@ -242,6 +276,9 @@ details > div { padding-bottom: 14px; }
   .shots { grid-auto-columns: 180px; padding: 8px 16px 20px; }
   .foot .grass { height: 100px; }
   .todo { white-space: normal; }
+  .age { font-size: 20px; }
+  .dev-big { width: 74px; height: 74px; font-size: 28px; }
+  .dev-point { padding: 12px 14px; gap: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
