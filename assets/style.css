@@ -201,6 +201,9 @@ section { padding: 44px 0; }
 }
 .dev-big small { display: block; font-size: 15px; font-weight: 700; margin-top: 2px; }
 
+.parents.values { grid-template-columns: repeat(4, 1fr); }
+.values .card h3 { font-size: 22px; }
+
 /* ── FAQ na stronie głównej ───────────────────────── */
 .faq details { box-shadow: 0 3px 0 rgba(27, 42, 74, .06); }
 
@@ -261,6 +264,7 @@ details > div { padding-bottom: 14px; }
   .hero .phone { max-width: 260px; }
   .grid-subjects { grid-template-columns: repeat(2, 1fr); }
   .parents, .price, .dev { grid-template-columns: 1fr; }
+  .parents.values { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 520px) {
   body { font-size: 17px; }
@@ -276,6 +280,7 @@ details > div { padding-bottom: 14px; }
   .shots { grid-auto-columns: 180px; padding: 8px 16px 20px; }
   .foot .grass { height: 100px; }
   .todo { white-space: normal; }
+  .parents.values { grid-template-columns: 1fr; }
   .age { font-size: 20px; }
   .dev-big { width: 74px; height: 74px; font-size: 28px; }
   .dev-point { padding: 12px 14px; gap: 12px; }

@@ -8,7 +8,7 @@ To repo jest źródłem strony: zmiany w tekstach robimy tutaj.
 | Adres | Plik | Treść |
 |---|---|---|
 | `/` | `index.html` | czego uczy, zrzuty, dla rodziców, cena |
-| `/prywatnosc/` | `prywatnosc/index.html` | polityka prywatności (adres podany w grze, ekran „O aplikacji”, i w Google Play) |
+| `/prywatnosc/` | `prywatnosc/index.html` | polityka prywatności (adres podany w aplikacji, ekran „O aplikacji”, i w Google Play) |
 | `/regulamin/` | `regulamin/index.html` | regulamin: wersja bezpłatna, 7 dni próby, subskrypcja, reklamacje |
 | `/pomoc/` | `pomoc/index.html` | kontakt i najczęstsze pytania |
 | (każdy zły adres) | `404.html` | „Nie ma takiej strony” |
@@ -25,12 +25,12 @@ Na stronie są żółte, przerywane ramki (`<span class="todo">`), wyszukaj `cla
 Teksty prywatności i regulaminu warto dać do przejrzenia prawnikowi. Polityka zakłada stan na premierę:
 zakupy przez Google Play i bramkę dla rodzica przed zakupem.
 
-Gdy gra pojawi się w sklepie, przycisk „Wkrótce w Google Play” (`index.html`, `.btn.soon`) zamień na link
+Gdy aplikacja pojawi się w sklepie, przycisk „Wkrótce w Google Play” (`index.html`, `.btn.soon`) zamień na link
 `https://play.google.com/store/apps/details?id=pl.juzumiem.app` (najlepiej z oficjalną plakietką Google Play).
 
 ## Grafiki i czcionki
 
-Skrypt `www/_zrodla/mk_assets.py` w repo gry (MatematykaCzytanie, gałąź `claude/project-thread-rduiiu`) generuje `assets/img/` i `assets/fonts/` z zasobów gry (logo, ikony sekcji, tło,
+Skrypt `www/_zrodla/mk_assets.py` w repo aplikacji (MatematykaCzytanie, gałąź `claude/project-thread-rduiiu`) generuje `assets/img/` i `assets/fonts/` z zasobów aplikacji (logo, ikony sekcji, tło,
 czcionki Baloo 2 i Andika jako woff2, licencja OFL obok) oraz wycina zrzuty 540×960 z zestawień w folderze projektu.
 Czcionki są na serwerze strony, nie z Google Fonts, żeby nie wysyłać adresów IP do Google.
 
